@@ -1,7 +1,5 @@
 import React from 'react';
 import {
-  Tabs,
-  Tab,
   Card,
   CardContent,
   Button,

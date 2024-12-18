@@ -1,6 +1,4 @@
 import {
-  Tabs,
-  Tab,
   Card,
   CardContent,
   Button,
