@@ -31,3 +31,11 @@ npm run lint -- --fix
 npm run build
 npm start
 ```
+
+### There should be a line gap between library imports and local file imports:
+```bash
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+import SideDrawer from "../components/SideDrawer";
+```

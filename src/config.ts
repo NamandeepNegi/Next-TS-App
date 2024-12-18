@@ -1,3 +1,5 @@
+import axios from "axios";
+
 const environment: string = process.env.NEXT_PUBLIC_ENVIRONMENT || "development";
 
 interface ServiceData {
@@ -29,5 +31,10 @@ switch (environment) {
     serviceData.clientURL = "http://localhost:3000";
     break;
 }
+
+
+export const axiosClient = axios.create({
+  baseURL: serviceData.serviceURL
+});
 
 export default serviceData;

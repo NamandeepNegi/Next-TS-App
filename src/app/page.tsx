@@ -1,6 +1,15 @@
-import serviceData from "@/config";
+import { Metadata } from 'next';
 
-export default function Home() {
-  // console.log(serviceData)
-  return <>fdgfd</>;
-}
+export const metadata: Metadata = {
+  title: 'JustWravel',
+  description: 'A Social Travel Community',
+};
+
+const HomePage = () => {
+  return (
+    <>
+    </>
+  );
+};
+
+export default HomePage;
