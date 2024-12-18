@@ -30,7 +30,7 @@ export default function RootLayout({
         <AppRouterCacheProvider>
           <div className="flex h-screen">
             <SideDrawer />
-            <div style={{ marginLeft: "245px" }}>{children}</div>
+            <div style={{ marginLeft: "245px", marginTop: "80px" }}>{children}</div>
           </div>
         </AppRouterCacheProvider>
       </body>

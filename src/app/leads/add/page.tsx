@@ -1,9 +1,9 @@
-import LeadsList from '@/components/leads/LeadsList'
 import React from 'react'
+import LeadForm from "@/components/leads/LeadForm"
 
 const page = () => {
   return (
-    <LeadsList/>
+    <LeadForm/>
   )
 }
 

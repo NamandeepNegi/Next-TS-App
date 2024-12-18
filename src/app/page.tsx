@@ -1,3 +1,4 @@
+import TabsComponentHomepage from '@/components/homepage/TabsComponentHomepage';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -8,6 +9,7 @@ export const metadata: Metadata = {
 const HomePage = () => {
   return (
     <>
+    <TabsComponentHomepage/>
     </>
   );
 };
