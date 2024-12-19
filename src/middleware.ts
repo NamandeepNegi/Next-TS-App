@@ -18,9 +18,8 @@ export async function middleware(request: NextRequest) {
 
   if (access_token) {
     try {
-      const user  = await getInitialDataByAccessToken()
-    console.log(user)
-      
+      const user = await getInitialDataByAccessToken()
+
     } catch (error) {
       console.log(error)
     }

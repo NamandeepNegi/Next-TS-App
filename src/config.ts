@@ -14,7 +14,7 @@ const serviceData: ServiceData = {
 
 switch (environment) {
   case "development":
-    serviceData.serviceURL = process.env.NEXT_PUBLIC_LOCAL_SERVER_URL || "http://localhost:5000";
+    serviceData.serviceURL = process.env.NEXT_PUBLIC_LOCAL_SERVER_URL || "https://dummyjson.com";
     serviceData.clientURL = process.env.NEXT_PUBLIC_LOCAL_CLIENT_URL || "http://localhost:3000";
     break;
   case "staging":
