@@ -26,6 +26,7 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import ProfileComponent from "./authentication/ProfileComponent";
 
 const drawerWidth = 240;
 
@@ -58,34 +59,40 @@ const SideDrawer: React.FC = () => {
 
       {/* Top App Bar */}
       <AppBar
-        position="fixed"
-        sx={{
-          zIndex: (theme) => theme.zIndex.drawer + 1,
-          backgroundColor: "#1976d2",
-        }}
-      >
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="toggle sidebar"
-            edge="start"
-            onClick={toggleSidebar}
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Image
-            src={`https://www.justwravel.com/_next/static/media/JW-logo-dark.ec2abfdd.png`}
-            alt="JustWravel Logo"
-            height={300}
-            width={300}
-            style={{
-              width: "10.5rem",
-              height: "2.5rem",
-            }}
-          />
-        </Toolbar>
-      </AppBar>
+    position="fixed"
+    sx={{
+      zIndex: (theme) => theme.zIndex.drawer + 1,
+      backgroundColor: "#1976d2",
+    }}
+  >
+    <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
+      {/* Left section (Menu Icon + Image) */}
+      <Box sx={{ display: 'flex', alignItems: 'center' }}>
+        <IconButton
+          color="inherit"
+          aria-label="toggle sidebar"
+          edge="start"
+          onClick={toggleSidebar}
+          sx={{ mr: 2 }}
+        >
+          <MenuIcon />
+        </IconButton>
+        <Image
+          src="https://www.justwravel.com/_next/static/media/JW-logo-dark.ec2abfdd.png"
+          alt="JustWravel Logo"
+          height={300}
+          width={300}
+          style={{
+            width: "10.5rem",
+            height: "2.5rem",
+          }}
+        />
+      </Box>
+
+      {/* Right section (Logout Button) */}
+      <ProfileComponent/>
+    </Toolbar>
+  </AppBar>
 
       {/* Sidebar */}
       <Drawer

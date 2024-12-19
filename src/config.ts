@@ -34,7 +34,9 @@ switch (environment) {
 
 
 export const axiosClient = axios.create({
-  baseURL: serviceData.serviceURL
+  baseURL: serviceData.serviceURL,
 });
+
+
 
 export default serviceData;
